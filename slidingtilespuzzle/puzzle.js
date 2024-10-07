@@ -11,6 +11,18 @@ let count = 1;
 //var imgPlace = ["spider1", "spider2", "spider3", "spider4", "spider5", "spider6", "spider7", "spider8", "spider9"]
 var imgPlace = ["spider4", "spider2", "spider8", "spider5", "spider1", "spider6", "spider7", "spider9", "spider3"]
 
+const states = (id) => {
+    if (id == 1) return [2, 5];
+    if (id == 2) return [1, 3, 6];
+    if (id == 3) return [2, 4, 7];
+    if (id == 4) return [3, 8];
+    if (id == 5) return [1, 6, 9];
+    if (id == 6) return [2, 5, 7, 10];
+    if (id == 7) return [3, 6, 8, 11];
+    if (id == 8) return [4, 7, 12];
+    if (id == 9) return [5, 10, 13];
+  };
+  
 window.onload = function() {
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
@@ -37,7 +49,6 @@ window.onload = function() {
         }
     }
 }
-
 
 //Has to check if current tile is white or current tile cannot move
 function moveTile(whiteTile) {
